@@ -1,14 +1,13 @@
 package com.herokuapp.restfulbooker;
 
 import com.herokuapp.restfulbooker.data.Booking;
-import com.herokuapp.restfulbooker.data.BookingDates;
 import org.testng.annotations.DataProvider;
 
 public class BookingDataProvider {
     @DataProvider
     public Object[][] bookingDataProvider() {
-        BookingDates validBookingDates = new BookingDates("2024-06-01", "2024-06-30");
-        BookingDates invalidBookingDates = new BookingDates("2024.06.01", "2024 06:31");
+        Booking.BookingDates validBookingDates = new Booking.BookingDates("2024-06-01", "2024-06-30");
+        Booking.BookingDates invalidBookingDates = new Booking.BookingDates("2024.06.01", "2024 06:31");
         return new Object[][]{
                 // valid data
                 {new Booking("Jim", "Brown", 111, true, validBookingDates, "Breakfast")},

@@ -17,8 +17,8 @@ public class BaseTest {
                 .build();
 
         responseSpec = new ResponseSpecBuilder()
-                .expectStatusCode(200)
                 .expectContentType("application/json")
+                .expectStatusCode(200)
                 .build();
 
     }
